@@ -1,5 +1,7 @@
 package com.badr.nwes.beyondbadr.SmartPhone;
 
+import android.app.Activity;
+import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.app.Fragment;
@@ -22,7 +24,7 @@ public class FragmentHome extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.fragment_home,container,false);
-
+        getActivity().setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 
         main_layout = (LinearLayout)rootView.findViewById(R.id.fragment_home_linearL);
         TextView test = new TextView(this.getActivity());
@@ -31,4 +33,5 @@ public class FragmentHome extends Fragment {
 
         return rootView;
     }
+
 }

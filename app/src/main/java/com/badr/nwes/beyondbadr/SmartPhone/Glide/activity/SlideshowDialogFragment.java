@@ -1,6 +1,7 @@
 package com.badr.nwes.beyondbadr.SmartPhone.Glide.activity;
 
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.pm.ActivityInfo;
 import android.graphics.Bitmap;
@@ -130,8 +131,9 @@ public class SlideshowDialogFragment extends DialogFragment {
 
             //Assets Local
             Bitmap bitmap_large = SystemConfiguration.decodeSampledBitmapFromResource(image.getLarge(), 0,0, getActivity());
-            imageViewPreview.setScaleType(ImageView.ScaleType.CENTER);
             imageViewPreview.setImageBitmap(bitmap_large);
+            //imageViewPreview.setRotation(90.0f);
+            imageViewPreview.setScaleType(ImageView.ScaleType.CENTER_INSIDE);
 
             container.addView(view);
 
@@ -154,4 +156,5 @@ public class SlideshowDialogFragment extends DialogFragment {
             container.removeView((View) object);
         }
     }
+
 }

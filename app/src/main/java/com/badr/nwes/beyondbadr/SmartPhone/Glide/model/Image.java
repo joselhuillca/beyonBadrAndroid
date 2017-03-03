@@ -1,8 +1,11 @@
 package com.badr.nwes.beyondbadr.SmartPhone.Glide.model;
 
 import android.content.Context;
+import android.support.v4.app.FragmentManager;
 
 import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by Lincoln on 04/04/16.
@@ -12,7 +15,26 @@ public class Image implements Serializable {
     private String small, medium, large;
     private String timestamp;
 
+    //------------------------------------Solo para Fragment Badr----------------------------------------------
     private Context mcontext;
+    private int position;
+    private List<Image> images;
+
+    public List<Image> getImages() {
+        return images;
+    }
+
+    public void setImages(List<Image> images) {
+        this.images = images;
+    }
+
+    public int getPosition() {
+        return position;
+    }
+
+    public void setPosition(int position) {
+        this.position = position;
+    }
 
     public Context getMcontext() {
         return mcontext;
@@ -22,6 +44,7 @@ public class Image implements Serializable {
         this.mcontext = mcontext;
     }
 
+    //-----------------------------------------------------------------------------------------------------
     public Image() {
     }
 

@@ -1,7 +1,9 @@
 package com.badr.nwes.beyondbadr.SmartPhone;
 
+import android.app.Activity;
 import android.app.Fragment;
 import android.app.ProgressDialog;
+import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.FragmentActivity;
@@ -46,6 +48,7 @@ public class FragmentArt extends Fragment{
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.fragment_art,container,false);
+        getActivity().setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 
         context = (FragmentActivity) getActivity();
 
@@ -93,11 +96,7 @@ public class FragmentArt extends Fragment{
 
     private void fetchImages() throws JSONException {
 
-        pDialog.setMessage("Downloading json...");
-        pDialog.show();
         JSONArray response = new JSONArray(jsonBuffer);
-
-        pDialog.hide();
 
         images.clear();
         for (int i = 0; i < response.length(); i++) {
@@ -121,4 +120,5 @@ public class FragmentArt extends Fragment{
 
         mAdapter.notifyDataSetChanged();
     }
+
 }

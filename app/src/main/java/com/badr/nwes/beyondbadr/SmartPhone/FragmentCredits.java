@@ -1,7 +1,9 @@
 package com.badr.nwes.beyondbadr.SmartPhone;
 
+import android.app.Activity;
 import android.app.Fragment;
 import android.content.Context;
+import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.util.Log;
@@ -32,6 +34,7 @@ public class FragmentCredits extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.fragment_credits,container,false);
+        getActivity().setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 
         Init(rootView);
         ImageSimpleAdapter listViewAdapter = new ImageSimpleAdapter(getListOfImageSimple());
@@ -59,4 +62,5 @@ public class FragmentCredits extends Fragment {
         img_simple.add(new ImageSimple("phoneChapter1/tercero_escudo.png", "description",(int)(size_widht),1.0,context));
         return img_simple;
     }
+
 }

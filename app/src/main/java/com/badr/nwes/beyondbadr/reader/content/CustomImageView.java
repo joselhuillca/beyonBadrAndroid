@@ -88,7 +88,7 @@ public class CustomImageView extends ImageView implements OnClickListener {
         this.setOnClickListener(this);
     }
     @Override
-    public void onClick(View v) {
+    public void onClick(View view) {
 
 
 
@@ -108,18 +108,6 @@ public class CustomImageView extends ImageView implements OnClickListener {
 
 
         PageIndex pageIndex =  (PageIndex)this.getTag();
-
-
-        if(true){//SMARTPHONE----------------------------------------------------------------------
-            //if(root_layout == null)
-                //root_layout  = (RelativeLayout)this.getParent().getParent().getParent().getParent();
-
-            //tabmore = (TabMore) this.getParent().getParent().getParent().getParent().getParent().getParent();
-
-
-            Toast.makeText(this.getContext(),"click image",Toast.LENGTH_SHORT).show();
-            return;
-        }
 
         if(root_layout == null) {
             root_layout = (RelativeLayout) this.getParent().getParent().getParent().getParent().getParent();

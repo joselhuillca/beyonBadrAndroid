@@ -2,6 +2,7 @@ package com.badr.nwes.beyondbadr.SmartPhone;
 
 import android.app.Fragment;
 import android.content.Context;
+import android.content.pm.ActivityInfo;
 import android.content.res.Resources;
 import android.graphics.Bitmap;
 import android.graphics.Color;
@@ -24,13 +25,7 @@ import android.widget.TextView;
 import com.badr.nwes.beyondbadr.R;
 import com.badr.nwes.beyondbadr.SmartPhone.Glide.model.Image;
 import com.badr.nwes.beyondbadr.SystemConfiguration;
-import com.badr.nwes.beyondbadr.TabSmartphone.TabMore;
 import com.badr.nwes.beyondbadr.adapters.GeneralImageItemDataAdapter;
-import com.badr.nwes.beyondbadr.adapters.ImageItemData;
-import com.badr.nwes.beyondbadr.data.BookDataSource;
-import com.badr.nwes.beyondbadr.data.ChapterDataSource;
-import com.badr.nwes.beyondbadr.data.PListLoader;
-import com.badr.nwes.beyondbadr.data.SectionDataSource;
 import com.telerik.widget.list.RadListView;
 
 import org.json.JSONArray;
@@ -57,33 +52,24 @@ public class FragmentBadr extends Fragment {
 
     private String TAG = FragmentArt.class.getSimpleName();
     private String jsonComicpreview;
+    private String jsonCharacteres;
     public RatingBar ratingBar;
-
-    // INICIO DE VARIABLES TEST - RADLIST --------------------------------
-    public static final BookDataSource book = new BookDataSource();
-    private int num_of_chapters;
-    private int[]init_pos_chapter_;
-    private int[]end_pos_chapter_;
-    private int scale_dx_=0;
-    int size_widht;
-    int size_height;
-    int numeroThumbalis_inScreen;
-    // FIN DE VARIABLES TEST - RADLIST ---------------------------------
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.fragment_badr,container,false);
+        getActivity().setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 
         Init(rootView);
         Fill_About();
         Fill_Sinopsys();
         Fill_Credits();
 
-        init_data();//Para elRadList de Comic y Characters
+        //init_data();//Para elRadList de Comic y Characters
         Fill_Comic();
         Fill_RateComic();
-        //Fill_Characters();
+        Fill_Characters();
 
         return rootView;
     }
@@ -302,10 +288,10 @@ public class FragmentBadr extends Fragment {
         listView_comic.setLayoutManager(lmngr);
 
         //Trabajando con json
-        jsonComicpreview = SystemConfiguration.setJsonString("badr_wallpapers.json",context);
+        jsonComicpreview = SystemConfiguration.setJsonString("badr_comicpreview.json",context);
         List<Image> images = new ArrayList<>();
         try {
-            images = fetchImages();
+            images = fetchImages(jsonComicpreview);
         } catch (JSONException e) {
             e.printStackTrace();
         }
@@ -349,7 +335,7 @@ public class FragmentBadr extends Fragment {
     }
 
     //Llenamos la parte de Characters
-    /*private void Fill_Characters(){
+    private void Fill_Characters(){
         TextView title_characters = new TextView(context);
         title_characters.setText("Chatacters Scroll");
         int padding_top = SystemConfiguration.getWidth(26);
@@ -364,70 +350,31 @@ public class FragmentBadr extends Fragment {
         listView_characters.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT));
         listView_characters.setLayoutManager(lmngr);
 
+        //Trabajando con json
+        jsonCharacteres = SystemConfiguration.setJsonString("badr_characters2.json",context);
+        List<Image> images = new ArrayList<>();
+        try {
+            images = fetchImages(jsonCharacteres);
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+
         //Adapters ---------------------
         GeneralImageItemDataAdapter adapter = new GeneralImageItemDataAdapter(
-                getListOfItemData(1),
+                images,
                 FragmentBadr.this.getActivity(),
                 R.layout.general_image_item_data);
         listView_characters.setAdapter(adapter);
 
         layout_characters.addView(title_characters);
         layout_characters.addView(listView_characters);
-    }*/
-
-    // -------------------------------- INICIO - RADLIST - ADAPTERS ----------------------------------
-    public void init_data(){
-        PListLoader loader = new PListLoader(context);
-
-        ArrayList<ChapterDataSource> chapters = new ArrayList<ChapterDataSource>();
-
-        //Log.Info("cargado de chapters: " , "chapter: " + i );
-        for (int i = 0; i < 6; i++) {
-            ChapterDataSource chapter = loader.LoadChapterDataSource("", "chapter" + (i + 1) + ".xml");
-            chapters.add(chapter);
-            Log.d("chapter",String.format("%d",chapter.Sections.size()));
-        }
-
-        book.Chapters = chapters;
-
-        num_of_chapters = book.Chapters.size();
-        init_pos_chapter_ = new int[num_of_chapters];
-        end_pos_chapter_ = new int[num_of_chapters];
-
-
-        numeroThumbalis_inScreen = 2;
-        scale_dx_ = (int) ( (1.0 * size_widht) / numeroThumbalis_inScreen );
-
-        size_widht = this.getActivity().getWindowManager().getDefaultDisplay().getHeight();
-        size_height = this.getActivity().getWindowManager().getDefaultDisplay().getHeight()/  SystemConfiguration.SCREEN_HEIGHT_DIVIDER;
     }
 
-    private List<ImageItemData> getListOfItemData(int ind_chapter) {
-        List<ImageItemData> imagesItems = new ArrayList<>();
-        if (ind_chapter>num_of_chapters)return null;
+    // -------------------------------- INICIO - Llenando - ADAPTERS ----------------------------------
 
-        ChapterDataSource ch = book.Chapters.get(ind_chapter);
-        int num_of_sections = ch.Sections.size();
-        if(ind_chapter > 0) init_pos_chapter_[ind_chapter] = end_pos_chapter_[ind_chapter - 1];
-        if(ind_chapter > 0) end_pos_chapter_[ind_chapter] = end_pos_chapter_[ind_chapter - 1];
-
-        int cont = 0;
-        for(int ind_section = 0 ; ind_section <num_of_sections; ind_section++) {
-            SectionDataSource sec = ch.Sections.get(ind_section);
-            int number_r =sec.Pages.size();
-            end_pos_chapter_[ind_chapter] += (number_r * scale_dx_);
-            for (int ind_image = 0; ind_image <number_r ;  ind_image++) {
-                imagesItems.add(new ImageItemData("name", "descrip", context, sec,ind_chapter,ind_section, ind_image, size_widht, size_height, numeroThumbalis_inScreen,end_pos_chapter_,number_r,cont));
-                cont++;
-            }
-        }
-
-        return imagesItems;
-    }
-    // -------------------------------- FIN - RADLIST - ADAPTERS ----------------------------------
-
-    private List<Image> fetchImages() throws JSONException {
-        JSONArray response = new JSONArray(jsonComicpreview);
+    //Para el Comic Preview y los characteres
+    private List<Image> fetchImages(String fileJson) throws JSONException {
+        JSONArray response = new JSONArray(fileJson);
         List<Image> images = new ArrayList<>();
 
         images.clear();
@@ -443,12 +390,17 @@ public class FragmentBadr extends Fragment {
                 image.setLarge(url.getString("large"));
                 image.setTimestamp(object.getString("timestamp"));
                 image.setMcontext(getActivity());
+                image.setPosition(i);
 
                 images.add(image);
 
             } catch (JSONException e) {
                 Log.e(TAG, "Json parsing error: " + e.getMessage());
             }
+        }
+        //pasamos todas las imagenes
+        for (int i = 0; i < response.length(); i++) {
+            images.get(i).setImages(images);
         }
         return  images;
     }
