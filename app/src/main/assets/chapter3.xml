@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>chapter</key>
+	<array>
+		<dict>
+			<key>section</key>
+			<array>
+	  
+	<dict><key>PageContentDir</key><string>p1y2</string></dict>
+	<dict><key>PageContentDir</key><string>p3_1</string></dict>
+	<dict><key>PageContentDir</key><string>p3_2</string></dict>
+	<dict><key>PageContentDir</key><string>p3_3</string></dict>
+	<dict><key>PageContentDir</key><string>p4_1</string></dict>
+	<dict><key>PageContentDir</key><string>p4_2</string></dict>
+	<dict><key>PageContentDir</key><string>p4_3</string></dict>
+	<dict><key>PageContentDir</key><string>p5_1</string></dict>
+	<dict><key>PageContentDir</key><string>p6_1</string></dict>
+	<dict><key>PageContentDir</key><string>p6_2</string></dict>
+	<dict><key>PageContentDir</key><string>p7_1</string></dict>
+	<dict><key>PageContentDir</key><string>p7_2</string></dict>
+	<dict><key>PageContentDir</key><string>p8_1</string></dict>
+	<dict><key>PageContentDir</key><string>p8_2</string></dict>
+	<dict><key>PageContentDir</key><string>p9_1</string></dict>
+	<dict><key>PageContentDir</key><string>p9_2</string></dict>
+	<dict><key>PageContentDir</key><string>p9_3</string></dict>
+	<dict><key>PageContentDir</key><string>p10_1</string></dict>
+	<dict><key>PageContentDir</key><string>p10_2</string></dict>
+	<dict><key>PageContentDir</key><string>p11_1</string></dict>
+	<dict><key>PageContentDir</key><string>p11_2</string></dict>
+	<dict><key>PageContentDir</key><string>p12_1</string></dict>
+	<dict><key>PageContentDir</key><string>p12_2</string></dict>
+	<dict><key>PageContentDir</key><string>p12_3</string></dict>
+	<dict><key>PageContentDir</key><string>p13_1</string></dict>
+	<dict><key>PageContentDir</key><string>p13_2</string></dict>
+	<dict><key>PageContentDir</key><string>p14_1</string></dict>
+	<dict><key>PageContentDir</key><string>p14_2</string></dict>
+	<dict><key>PageContentDir</key><string>p14_3</string></dict>
+	<dict><key>PageContentDir</key><string>p15_1</string></dict>
+	<dict><key>PageContentDir</key><string>p15_2</string></dict>
+	<dict><key>PageContentDir</key><string>p16_1</string></dict>
+	<dict><key>PageContentDir</key><string>p16_2</string></dict>
+	<dict><key>PageContentDir</key><string>p17_1</string></dict>
+	<dict><key>PageContentDir</key><string>p17_2</string></dict>
+	<dict><key>PageContentDir</key><string>p17_3</string></dict>
+	<dict><key>PageContentDir</key><string>p18_1</string></dict>
+	<dict><key>PageContentDir</key><string>p18_2</string></dict>
+	<dict><key>PageContentDir</key><string>p19_1</string></dict>
+	<dict><key>PageContentDir</key><string>p19_2</string></dict>
+	<dict><key>PageContentDir</key><string>p20y21_1</string></dict>
+	<dict><key>PageContentDir</key><string>p20y21_2</string></dict>
+	<dict><key>PageContentDir</key><string>p22_1</string></dict>
+	<dict><key>PageContentDir</key><string>p22_2</string></dict>
+	<dict><key>PageContentDir</key><string>p23_1</string></dict>
+	<dict><key>PageContentDir</key><string>p23_2</string></dict>
+	<dict><key>PageContentDir</key><string>p23_3</string></dict>
+	<dict><key>PageContentDir</key><string>p24_1</string></dict>
+ 			</array>
+			<key>sectionName</key>
+			<string>Ica</string>
+		</dict>
+	</array>
+</dict>
+</plist>

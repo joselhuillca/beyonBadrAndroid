@@ -1,0 +1,111 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:orientation="vertical"
+    tools:context="com.badr.nwes.beyondbadr.FirstLevelTabActivitySmartPhone$PlaceholderFragment">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none"
+        >
+
+        <com.badr.nwes.beyondbadr.common.CustomLinearLayout
+            android:id="@+id/listViewsHolder"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/txtCharacters"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:layout_marginTop="16dp"
+                android:text="CHARACTERS"
+                android:textColor="@color/white"
+                android:textSize="12dp" />
+
+            <com.telerik.widget.list.RadListView
+                android:id="@+id/lvFirst"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:clipToPadding="false"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:paddingRight="@dimen/activity_horizontal_margin">
+
+            </com.telerik.widget.list.RadListView>
+
+            <TextView
+                android:id="@+id/txtComic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:layout_marginTop="16dp"
+                android:text="COMIC"
+                android:textColor="@color/white"
+                android:textSize="12dp" />
+
+            <com.telerik.widget.list.RadListView
+                android:id="@+id/lvSecond"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_below="@id/lvFirst"
+                android:layout_marginBottom="16dp"
+                android:layout_weight="1"
+                android:clipToPadding="false"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:paddingRight="@dimen/activity_horizontal_margin"
+                android:scrollbarStyle="outsideOverlay">
+
+            </com.telerik.widget.list.RadListView>
+
+            <TextView
+                android:id="@+id/txtArt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:layout_marginTop="16dp"
+                android:text="ART"
+                android:textColor="@color/white"
+                android:textSize="12dp" />
+
+            <com.telerik.widget.list.RadListView
+                android:id="@+id/lvThrid"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_below="@id/lvSecond"
+                android:layout_marginBottom="16dp"
+                android:layout_weight="1"
+                android:clipToPadding="false"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:paddingRight="@dimen/activity_horizontal_margin"
+                android:scrollbarStyle="outsideOverlay">
+
+            </com.telerik.widget.list.RadListView>
+            <TextView
+                android:id="@+id/txtEspaciador"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:layout_marginTop="5dp"
+                android:text=""
+                android:textColor="@color/white"
+                android:textSize="12dp" />
+        </com.badr.nwes.beyondbadr.common.CustomLinearLayout>
+
+
+    </ScrollView>
+
+</LinearLayout>

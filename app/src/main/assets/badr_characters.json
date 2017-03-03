@@ -1,0 +1,146 @@
+{
+  "AllCharacters": [
+    {
+      "UniqueId": "1",
+      "Name": "Abu Bakr As-Siddiq",
+      "GroupName": "Muslim",
+      "ImagePath": "levelzero/images/01.jpg",
+      "Age": 51,
+      "Height": 1.84,
+      "Weight": 90,
+      "Personality": "Truthful, honorable, faithful, veracious, extraordinary memory, courageous, brave, humble and feared warrior due to his strategies and lethal skills with multiple weapons. Abu Bakr As-Siddiq was chosen to become the first caliph in Islam after the death of Prophet Muhammad(SAW) in 634 CE!"
+    },
+    {
+      "UniqueId": "2",
+      "Name": "Sa’d Bin Mu’adh",
+      "GroupName": "Muslim",
+      "ImagePath": "levelzero/images/02.jpg",
+      "Age": 37,
+      "Height": 1.87,
+      "Weight": 76,
+      "Personality": "Loyal to the cause of Allah(SWT) and his Prophet(SAW). He is willing to give his life for them without hesitation, an optimistic and fearless warrior - Positive in all situations"
+    },
+    {
+      "UniqueId": "3",
+      "Name": "Abd Allah Ibn Mas’ud",
+      "GroupName": "Muslim",
+      "ImagePath": "levelzero/images/03.jpg",
+      "Age": 30,
+      "Height": 1.45,
+      "Weight": 50,
+      "Personality": "Due to his incredible prowess in armed combat, he can kill anyone on the battlefield without hesitation should they dare oppose Allah(SWT) and the Prophet(SAW)"
+    },
+    {
+      "UniqueId": "4",
+      "Name": "Talhah Bin Ubaidullah",
+      "GroupName": "Muslim",
+      "ImagePath": "levelzero/images/04.jpg",
+      "Age": 30,
+      "Height": 1.80,
+      "Weight": 84,
+      "Personality": "One of the very early converts - He is very serious, experienced scout, and a loyal soldier"
+    },
+    {
+      "UniqueId": "5",
+      "Name": "Miqdad Ibn  Amr Al-Bahrani",
+      "GroupName": "Muslim",
+      "ImagePath": "levelzero/images/05.jpg",
+      "Age": 30,
+      "Height": 1.99,
+      "Weight": 122,
+      "Personality": "His loyalty to his companions are admirable as well as his sincere devotion to Allah(SWT) and The Prophet(SAW) "
+    },
+    {
+      "UniqueId": "6",
+      "Name": "Sa’id Bin Zayd",
+      "GroupName": "Muslim",
+      "ImagePath": "levelzero/images/06.jpg",
+      "Age": 24,
+      "Height": 1.94,
+      "Weight": 75,
+      "Personality": "Quiet and silent, humbly obeying orders. He is always sure of the path to  be followed. Married to Umar Bin Khattab’s sister "
+    },
+    {
+      "UniqueId": "7",
+      "Name": "Sa’id Bin Zayd",
+      "GroupName": "Muslim",
+      "ImagePath": "levelzero/images/07.jpg",
+      "Age": 24,
+      "Height": 1.94,
+      "Weight": 75,
+      "Personality": "Quiet and silent, humbly obeying orders. He is always sure of the path to  be followed. Married to Umar Bin Khattab’s sister "
+    },
+
+    {
+      "UniqueId": "8",
+      "Name": "Abu Sufyan Ibn Harb",
+      "GroupName": "Quraish",
+      "ImagePath": "levelzero/images/08.jpg",
+      "Age": 64,
+      "Height": 1.87,
+      "Weight": 115,
+      "Personality": "A wealthy, affluent leader and popular figure with the Quraish. Staunch opponent of Muhammad(SAW).  Islamic ideology has made him very aggressive with an exquisite appreciation of wealth and luxury"
+    },
+    {
+      "UniqueId": "9",
+      "Name": "Al-Aswad Bin Abdul  Asad Al-Mukzumi",
+      "GroupName": "Quraish",
+      "ImagePath": "levelzero/images/09.jpg",
+      "Age": 24,
+      "Height": 1.94,
+      "Weight": 75,
+      "Personality": "He is a social outcast and is despised by the Quraish because of his sadistic thoughts, violent, impulsive and hatred toward all who follows Allah(SWT) and his Prophet(SAW) "
+    },
+    {
+      "UniqueId": "10",
+      "Name": "Abu Jahl  A.K.A Amir Ibn Hisham",
+      "GroupName": "Quraish",
+      "ImagePath": "levelzero/images/10.jpg",
+      "Age": 68,
+      "Height": 1.87,
+      "Weight": 91,
+      "Personality": "Natural leader and opponent known as Asadul Ahlaf. The lion of the opposing group who swore vengeance against all of the followers of Muhammad(SAW). Hotheaded and very stubborn.  He is easy to anger and always ready to provoke a fight when an opportunity presents itself "
+    } ,
+    {
+      "UniqueId": "11",
+      "Name": "Umaya Ibn Khalaf Ibn Safwan",
+      "GroupName": "Quraish",
+      "ImagePath": "levelzero/images/11.jpg",
+      "Age": 58,
+      "Height": 1.66,
+      "Weight": 74,
+      "Personality": "Cowardly and untrustworthy, oppression and torture of his slaves, most notable of them was Bilal Ibn Rabah. Cowers behind other warriors seeking their aid to defend him, very reluctant to take arms and engage in warfare "
+    }  ,
+    {
+      "UniqueId": "12",
+      "Name": "Damdam Bin’amr  Al-Gifari",
+      "GroupName": "Quraish",
+      "ImagePath": "levelzero/images/12.jpg",
+      "Age": 59,
+      "Height": 1.94,
+      "Weight": 96,
+      "Personality": "Lying and deceptive in nature, he is constantly trying to win the favor of his superiors and especially with his master - Abu Sufyan"
+    },
+    {
+      "UniqueId": "13",
+      "Name": "Muslim",
+      "GroupName": "Muslim",
+      "ImagePath": "levelzero/images/13.jpg",
+      "Age": 0,
+      "Height": 0,
+      "Weight": 0,
+      "Personality": "These are the earliest of Muslim’s who accept the ideology that there is only One God worthy of worship, Allah(SWT) and that Muhammad(SAW) is his last messenger and prophet."
+    },
+    {
+      "UniqueId": "14",
+      "Name": "Quraish",
+      "GroupName": "Quraish",
+      "ImagePath": "levelzero/images/14.jpg",
+      "Age": 0,
+      "Height": 0,
+      "Weight": 0,
+      "Personality": "Are a powerful merchant tribe that controlled the lands of Mecca and the Ka’bah. Prophet Muhammad(SAW) was of the Banu Hashim clan of the Qoraish tribe. The tribal leaders see Muhammad(SAW) as a significant threat to their livelihood."
+    }
+
+  ]
+}
