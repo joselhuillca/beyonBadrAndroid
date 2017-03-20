@@ -19,6 +19,15 @@ public class Image implements Serializable {
     private Context mcontext;
     private int position;
     private List<Image> images;
+    private String fileJSON;
+
+    public String getFileJSON() {
+        return fileJSON;
+    }
+
+    public void setFileJSON(String fileJSON) {
+        this.fileJSON = fileJSON;
+    }
 
     public List<Image> getImages() {
         return images;

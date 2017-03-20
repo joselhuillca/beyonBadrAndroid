@@ -17,6 +17,8 @@ import android.view.MenuItem;
 
 import com.badr.nwes.beyondbadr.R;
 
+import java.io.Serializable;
+
 public class NavigatorBadrSmartphone extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 

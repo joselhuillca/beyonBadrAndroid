@@ -3,6 +3,7 @@ package com.badr.nwes.beyondbadr.SmartPhone;
 import android.app.Activity;
 import android.app.Fragment;
 import android.app.ProgressDialog;
+import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -18,6 +19,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.badr.nwes.beyondbadr.R;
+import com.badr.nwes.beyondbadr.SmartPhone.Glide.activity.SlideShowActivity;
 import com.badr.nwes.beyondbadr.SmartPhone.Glide.activity.SlideshowDialogFragment;
 import com.badr.nwes.beyondbadr.SmartPhone.Glide.adapter.GalleryAdapter;
 import com.badr.nwes.beyondbadr.SmartPhone.Glide.model.Image;
@@ -63,10 +65,12 @@ public class FragmentArt extends Fragment{
         recyclerView.setItemAnimator(new DefaultItemAnimator());
         recyclerView.setAdapter(mAdapter);
 
+
+        jsonBuffer = SystemConfiguration.setJsonString("badr_wallpapers.json",context);
         recyclerView.addOnItemTouchListener(new GalleryAdapter.RecyclerTouchListener(getActivity(), recyclerView, new GalleryAdapter.ClickListener() {
             @Override
             public void onClick(View view, int position) {
-                Bundle bundle = new Bundle();
+                /*Bundle bundle = new Bundle();
                 bundle.putSerializable("images", images);
                 bundle.putInt("position", position);
 
@@ -74,7 +78,15 @@ public class FragmentArt extends Fragment{
                 FragmentTransaction ft = fm.beginTransaction();
                 SlideshowDialogFragment newFragment = SlideshowDialogFragment.newInstance();
                 newFragment.setArguments(bundle);
-                newFragment.show(ft, "slideshow");
+                newFragment.show(ft, "slideshow");*/
+
+                Bundle bundle = new Bundle();
+                bundle.putString("images", jsonBuffer);
+                bundle.putInt("position", position);
+
+                Intent intent = new Intent(context, SlideShowActivity.class);
+                intent.putExtras(bundle); //Put your id to your next Intent
+                view.getContext().startActivity(intent);
             }
 
             @Override
@@ -82,7 +94,6 @@ public class FragmentArt extends Fragment{
 
             }
         }));
-        jsonBuffer = SystemConfiguration.setJsonString("badr_wallpapers.json",context);
 
         try {
             fetchImages();

@@ -47,6 +47,7 @@ public class ImageSimpleAdapter extends ListViewAdapter {
         w = (int)(normalized*w);
         h = (int)(normalized*h);
         //Log.d("Size Width2: ",String.format("%d",h));
+        //Bitmap scaled = Bitmap.createScaledBitmap(input_image_bitmap, (int)(w*img_simple.getScaled()), (int)(h*img_simple.getScaled()), true);
         Bitmap scaled = Bitmap.createScaledBitmap(input_image_bitmap, (int)(w*img_simple.getScaled()), (int)(h*img_simple.getScaled()), true);
 
         viewHolder.image_Simple.setImageBitmap(scaled);

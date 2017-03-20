@@ -41,7 +41,8 @@
         <activity
             android:name=".SmartPhone.NavigatorBadrSmartphone"
             android:label="@string/title_activity_navigator_badr_smartphone"
-            android:theme="@style/Theme.AppCompat.NoActionBar"></activity>
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
+        <activity android:name=".SmartPhone.Glide.activity.SlideShowActivity"></activity>
     </application>
 
 </manifest>

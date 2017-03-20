@@ -391,6 +391,7 @@ public class FragmentBadr extends Fragment {
                 image.setTimestamp(object.getString("timestamp"));
                 image.setMcontext(getActivity());
                 image.setPosition(i);
+                image.setFileJSON(fileJson);
 
                 images.add(image);
 
